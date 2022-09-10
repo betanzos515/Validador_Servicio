@@ -19,6 +19,7 @@ let docsSTPS = fs.readdirSync('./docs/STPS');
 
 docsSTPS.map( documento =>{
     extraerSTPS(`./docs/STPS/${documento}`).then(data =>{
+        // fs.writeFileSync('./nuevaData.txt', JSON.stringify(data)+'\n\n\n\n', { flag : 'a+' },err =>{});
         console.log(data);
     });  
 });
